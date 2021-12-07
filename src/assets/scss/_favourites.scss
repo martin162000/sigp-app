@@ -1,0 +1,69 @@
+.favourites {
+    background: #001529;
+    padding: 25px;
+    color: white;
+    border-radius: 5px;
+    max-width: 450px;
+    margin: 0 auto;
+  
+    .btnGroup {
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%;
+      gap: 13px;
+      align-items: center;
+      flex-direction: column;
+  }
+    
+  
+    img {
+      width: 100%;
+      border: 2px solid white;
+      border-radius: 2px;
+    }
+  
+    .imgHolder {
+      max-width: 170px;
+      @media (max-width: 1160px) {
+        max-width: 90%;
+      }
+    }
+  
+    h3 {
+      color: white;
+      font-weight: 700;
+      font-size: 18px;
+      margin: 0 0 10px 0;
+      text-align: center;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #e1d9a20d;
+    }
+  
+    .favWrap {
+      padding: 20px 0;
+      justify-content: center;
+    }
+  
+    .favContent {
+      padding-left: 30px;
+  
+      @media (max-width: 1160px) {
+        max-width: 100%;
+        flex: 0 0 100%;
+        padding-left: 0px;
+        margin-top: 18px;
+      }
+  
+    }
+  
+    .btns{
+      width: 75%;
+    }
+  
+    .btnDetail {
+      background: #165591;
+    }
+  
+  
+  }
