@@ -37,6 +37,15 @@
       background: lighten( #001529, 10%);
       transform: scale(1.05);
     }
+
+    a {
+    color:white;
+
+      &:hover,
+      &:active {
+          color:white ;
+        }
+    }
   }
   
   .roww{
@@ -54,4 +63,5 @@
         width: 100%;
         margin: 0 auto;
       }
+
   }
