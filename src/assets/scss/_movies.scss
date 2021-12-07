@@ -1,23 +1,35 @@
 .movie {
     cursor: pointer;
+    position: relative;
     background: #001529;
     color: white;
     border-radius: 5px;
     padding-top: 10px;
     transition: all 0.2s;
+    padding-bottom: 50px;
   
     h2 {
-      color: white;
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 6px 16px;
     }
   
     img {
       width: 50%;
     }
+
+    .divImg {
+        min-height: 214px;
+    }
   
     .meta {
-      margin-top: 10px;
-      padding:10px;
-      background: black;
+        margin-top: 10px;
+        padding: 10px;
+        background: black;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
     }
   
     &:hover,

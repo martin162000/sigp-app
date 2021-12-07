@@ -1,7 +1,8 @@
 import React from 'react';
-import { Layout, Pagination } from 'antd';
+import { Layout} from 'antd';
 import SearchForm from '../Components/Movies/SearchForm';
 import FoundMovies from '../Components/Movies/FoundMovies';
+import Pages from '../Components/Movies/Pages';
 
 
 
@@ -18,8 +19,7 @@ const Movies = () => {
               <FoundMovies/>
               </Content>
 
-              <Pagination style={{textAlign:"center", margin:"50px 0px 0px"}} defaultCurrent={6} total={500} defaultPageSize={6}
-                showSizeChanger={false} responsive />
+              <Pages/>
           </Layout>
 
 
