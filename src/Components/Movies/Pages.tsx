@@ -10,16 +10,12 @@ const Pages = () => {
     const showState = useSelector((state:any) => state)
     const dispatch = useDispatch();
 
-
-
-
+    const dispFunction = (typ:string,data:any) => {
+        dispatch({type: typ, data: data});
+    }
 
     const onChange = (page:any) => {
-        dispatch({
-            type: "ADD_CURRENTPAGE",
-            data: page
-        });
-
+        dispFunction("ADD_CURRENTPAGE",page);
         const query = showState.search;
         axios.get(
           `https://omdbapi.com/?apikey=${apiKey}&s=${encodeURI(query)}&page=${page}`
@@ -37,19 +33,11 @@ const Pages = () => {
                 return !duplicate;
               });
 
-              dispatch({
-                type: "ADD_MOVIES",
-                data: filteredArr
-            });
-
+            dispFunction("ADD_MOVIES",filteredArr);
          } 
-
        })
-
-
-
-
     }
+    
     return (
         <>
             <Pagination style={{textAlign:"center", margin:"50px 0px 0px"}} defaultCurrent={1} total={showState.allResults ? showState.allResults: 0} defaultPageSize={10}

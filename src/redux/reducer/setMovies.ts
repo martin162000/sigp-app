@@ -1,6 +1,6 @@
-const getAllResults = (state = false, action:any) => {
+const setMovies = (state = false, action:any) => {
     switch (action.type) {
-        case "ADD_ALLRESULTS":
+        case "ADD_MOVIES":
             return action.data
     
         default:
@@ -9,4 +9,4 @@ const getAllResults = (state = false, action:any) => {
 
 }
 
-export default getAllResults
+export default setMovies

@@ -42,6 +42,12 @@
   .roww{
       width: 65%;
       margin: 0 auto;
+      padding-left: 2.5%;
+
+      @media (max-width: 767px) {
+        padding-left: 0;
+        justify-content: center;
+      }
   
   
       @media (max-width: 1272px) {

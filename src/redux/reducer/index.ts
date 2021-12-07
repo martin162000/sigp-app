@@ -1,14 +1,20 @@
 import { combineReducers } from "redux";
-import getAllResults from "./getAllResults";
-import getCurrentPage from "./getCurrentPage";
-import getMovies from "./getMovies"
-import getSearch from "./getSearch";
+import setAllResults from "./setAllResults";
+import setCurrentPage from "./setCurrentPage";
+import setMovies from "./setMovies"
+import setSearch from "./setSearch";
+import setIdDeatialMovie from "./setIdDeatialMovie";
+import setDetails from "./setDetails";
+
 
 const reducers = combineReducers ({
-    search: getSearch,
-    movies: getMovies,
-    allResults: getAllResults,
-    currentPage: getCurrentPage
+    search: setSearch,
+    movies: setMovies,
+    allResults: setAllResults,
+    currentPage: setCurrentPage,
+    deatilID: setIdDeatialMovie,
+    details: setDetails
+
 })
 
 export default reducers;

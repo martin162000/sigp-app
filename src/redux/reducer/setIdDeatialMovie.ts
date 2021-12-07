@@ -1,6 +1,6 @@
-const getSearch = (state = false, action:any) => {
+const setIdDeatialMovie = (state = false, action:any) => {
     switch (action.type) {
-        case "ADD_SEARCH":
+        case "ADD_MOVIEID":
             return action.data
     
         default:
@@ -9,4 +9,4 @@ const getSearch = (state = false, action:any) => {
 
 }
 
-export default getSearch
+export default setIdDeatialMovie

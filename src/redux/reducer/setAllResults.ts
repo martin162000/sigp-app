@@ -1,6 +1,6 @@
-const getCurrentPage = (state = false, action:any) => {
+const setAllResults = (state = false, action:any) => {
     switch (action.type) {
-        case "ADD_CURRENTPAGE":
+        case "ADD_ALLRESULTS":
             return action.data
     
         default:
@@ -9,4 +9,4 @@ const getCurrentPage = (state = false, action:any) => {
 
 }
 
-export default getCurrentPage
+export default setAllResults

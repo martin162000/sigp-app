@@ -9,6 +9,10 @@ const SearchForm = () => {
     const dispatch = useDispatch();
     const showState = useSelector((state:any) => state)
 
+    const dispFunction = (typ:string,data:any) => {
+        dispatch({type: typ, data: data});
+    }
+
     const handleSubmit = () => {
         const query = showState.search;
         const page = 1;
@@ -29,33 +33,17 @@ const SearchForm = () => {
                 return !duplicate;
               });
 
-              dispatch({
-                type: "ADD_MOVIES",
-                data: filteredArr
-             });
+             dispFunction("ADD_MOVIES",filteredArr);
+             dispFunction("ADD_ALLRESULTS",allResults);
+             dispFunction("ADD_CURRENTPAGE",page);
 
-            dispatch({
-                type: "ADD_ALLRESULTS",
-                data: allResults
-            });
-
-            dispatch({
-                type: "ADD_CURRENTPAGE",
-                data: page
-            });
          } 
-
        })
-      
- }
-
-    const handleChange = (data:any) => {
-        dispatch({
-            type: "ADD_SEARCH",
-            data: data
-        });
     }
 
+    const handleChange = (data:any) => {
+        dispFunction("ADD_SEARCH",data);
+    }
 
     return (
         <Form name="basic"labelCol={{ span: 8,}} wrapperCol={{span: 16,}} initialValues={{remember: true,}} autoComplete="off" style={{marginBottom:"80px"}} onFinish={handleSubmit}>

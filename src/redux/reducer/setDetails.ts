@@ -1,6 +1,6 @@
-const getMovies = (state = false, action:any) => {
+const setDetails = (state = false, action:any) => {
     switch (action.type) {
-        case "ADD_MOVIES":
+        case "ADD_DETAILS":
             return action.data
     
         default:
@@ -9,4 +9,4 @@ const getMovies = (state = false, action:any) => {
 
 }
 
-export default getMovies
+export default setDetails
