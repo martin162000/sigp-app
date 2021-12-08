@@ -13,12 +13,16 @@ const Details = () => {
   const showState = useSelector((state: any) => state);
   const dispatch = useDispatch();
 
+  const test = () => {
+    dispatch(fetchDetailsRequest(showState.deatilID)); 
+  }
+
   useEffect(() => {
 
     dispatch(fetchDetailsRequest(showState.deatilID)); 
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dispatch]);
+  }, []);
 
   if (!showState.deatilID) {
     return <CantFind />;
@@ -37,6 +41,8 @@ const Details = () => {
         ) : (
           <Loading />
         )}
+
+        <button onClick={test}>CLICK</button>
       </>
     );
   }

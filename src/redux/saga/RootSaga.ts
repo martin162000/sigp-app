@@ -1,7 +1,7 @@
 import { types, apiKey } from "../../types/types"
 import axios from "axios"
 import {addAllResults, addCurrentPage, addDetais, addMovie} from "../actions"
-import { call, takeEvery, put } from "typed-redux-saga";
+import { call, takeEvery, put, all } from "typed-redux-saga";
 
 
 function* ayscFetchRequest(action:any){
@@ -37,7 +37,7 @@ function* ayscFetchRequest(action:any){
           yield put(addAllResults(allRes))
           yield put(addCurrentPage(currPage))
     } catch(error) {
-        console.log(error);
+        //console.log(error);
     }
 }
 
@@ -57,12 +57,14 @@ function* ayscDetails(action:any){
           
           yield put(addDetais(detailData))
     } catch(error) {
-        console.log(error);
+        //console.log(error);
     }
 }
 
 export default function* RootSaga()
 {
-    yield takeEvery(types.SEND_REQUEST, ayscFetchRequest)
-    yield takeEvery(types.SEND_REQUEST_DETAILS, ayscDetails)
+    yield all([
+        takeEvery(types.SEND_REQUEST, ayscFetchRequest),
+        takeEvery(types.SEND_REQUEST_DETAILS, ayscDetails)
+      ]);
 }
