@@ -31,10 +31,8 @@ const Details = () => {
         };
         fetchData();
 
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       }, [movieId]);
-
-
-
 
 
     return (
@@ -43,7 +41,7 @@ const Details = () => {
     (
     <Layout className="site-layout-background" style={{ padding: '24px 0', width: "50%", minWidth:"325px", margin: "0 auto" }}>
         <Content style={{ padding: '0 24px', minHeight: 280, marginTop: "35px" }}>   
-            <Content className="detail">
+            <Content className="detail zoomfadeOut">
 
                 <Title/>
                 <ImgAndInfo/>

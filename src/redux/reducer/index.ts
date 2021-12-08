@@ -5,6 +5,7 @@ import setMovies from "./setMovies"
 import setSearch from "./setSearch";
 import setIdDeatialMovie from "./setIdDeatialMovie";
 import setDetails from "./setDetails";
+import setFavourites from "./setFavourites";
 
 
 const reducers = combineReducers ({
@@ -13,7 +14,8 @@ const reducers = combineReducers ({
     allResults: setAllResults,
     currentPage: setCurrentPage,
     deatilID: setIdDeatialMovie,
-    details: setDetails
+    details: setDetails,
+    favourites: setFavourites
 
 })
 

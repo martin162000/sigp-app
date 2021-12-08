@@ -5,6 +5,7 @@
     border-radius: 5px;
     max-width: 450px;
     margin: 0 auto;
+    margin-bottom: 15px;
   
     .btnGroup {
       justify-content: center;
@@ -59,6 +60,10 @@
   
     .btns{
       width: 75%;
+
+      @media (max-width: 887px) {
+        width: 89%;
+      }
     }
   
     .btnDetail {

@@ -15,7 +15,7 @@ function App() {
     <>
 
 
-  <Layout className="layout">
+  <Layout className="layout fadeIn">
             <Headerbar/>
 
             <Switch>

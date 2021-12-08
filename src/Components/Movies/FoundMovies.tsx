@@ -22,7 +22,7 @@ const FoundMovies = () => {
         <Row style={{textAlign:"center", rowGap: "22px", columnGap:"22px"}} className="roww">
 
                 {showState.movies ? showState.movies.map((movie:any) => (
-                        <Col className="movie"  xs={{ span: 24 }} lg={{ span: 11 }} md={{ span: 11 }} key={movie.imdbID} onClick={e => handleClickOnMovie(movie.imdbID)}>
+                        <Col className="movie zoomfadein"  xs={{ span: 24 }} lg={{ span: 11 }} md={{ span: 11 }} key={movie.imdbID} onClick={e => handleClickOnMovie(movie.imdbID)}>
                                 <h2>{movie.Title}</h2>
                                 <div className="divImg">
                                 <img src={movie.Poster} alt="movie art" />

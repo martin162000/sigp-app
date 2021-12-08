@@ -31,7 +31,7 @@
       margin: 0 0 10px 0;
       text-align: center;
       padding-bottom: 16px;
-      border-bottom: 1px solid #e1d9a20d;
+      //border-bottom: 1px solid #e1d9a20d;
     }
   
     .imgAndInfo {
@@ -58,5 +58,25 @@
     .infoStrong{
       color: white;
       font-weight: 600;
+    }
+
+    .star {
+      color:#e1d9a2;
+    }
+
+    .startUncheck {
+      cursor: pointer;
+      color: lighten(#e1d9a2, 20%);
+      transition: all 0.25s;
+
+      &:hover,
+      &:focus {
+        color:#e1d9a2;
+        transform: scale(1.2);
+      }
+    }
+
+    .activeStar {
+      transform: scale(1.2);
     }
   }

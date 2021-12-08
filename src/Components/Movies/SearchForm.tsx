@@ -46,7 +46,7 @@ const SearchForm = () => {
     }
 
     return (
-        <Form name="basic"labelCol={{ span: 8,}} wrapperCol={{span: 16,}} initialValues={{remember: true,}} autoComplete="off" style={{marginBottom:"80px"}} onFinish={handleSubmit}>
+        <Form className="fadeInFaster" name="basic"labelCol={{ span: 8,}} wrapperCol={{span: 16,}} initialValues={{remember: true,}} autoComplete="off" style={{marginBottom:"80px"}} onFinish={handleSubmit}>
             <Form.Item style={{ justifyContent: "center"}}> 
                 <Input name="search" style={{height: "40px", borderRadius: "4px"}} placeholder="Search for any movie or tv series "
                  onChange={ (e) => handleChange(e.target.value)} value={showState.search !== false ? showState.search : ""}/>
