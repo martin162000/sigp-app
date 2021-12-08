@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import "antd/dist/antd.css";
 import { Layout } from "antd";
 
@@ -33,6 +33,11 @@ function App() {
         <Headerbar />
 
         <Switch>
+
+          <Route exact path="/">
+              <Redirect to="/movies" />
+          </Route>
+
           <Route path="/movies" component={Movies} />
           <Route path="/details" component={Details} />
           <Route path="/favourites" component={Favourites} />

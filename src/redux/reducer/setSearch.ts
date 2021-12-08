@@ -1,6 +1,7 @@
+import {types} from '../../types/types'
 const setSearch = (state = false, action:any) => {
     switch (action.type) {
-        case "ADD_SEARCH":
+        case types.ADD_SEARCH:
             return action.data
     
         default:

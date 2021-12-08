@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Col } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+import { types } from "../../types/types";
 
 const FoundMovies = () => {
   const history = useHistory();
@@ -12,7 +13,7 @@ const FoundMovies = () => {
   const showState = useSelector((state: any) => state);
 
   const handleClickOnMovie = (movieId: any) => {
-    dispFunction("ADD_MOVIEID", movieId);
+    dispFunction(types.ADD_MOVIEID, movieId);
     document.getElementById("menuDetails")?.click();
     history.push("/details");
   };

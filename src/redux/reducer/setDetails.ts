@@ -1,6 +1,8 @@
+import {types} from '../../types/types'
+
 const setDetails = (state = false, action:any) => {
     switch (action.type) {
-        case "ADD_DETAILS":
+        case types.ADD_DETAILS:
             return action.data
     
         default:

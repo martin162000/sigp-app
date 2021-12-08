@@ -1,6 +1,7 @@
+import {types} from '../../types/types'
 const setIdDeatialMovie = (state = false, action:any) => {
     switch (action.type) {
-        case "ADD_MOVIEID":
+        case types.ADD_MOVIEID:
             return action.data
     
         default:

@@ -5,6 +5,7 @@ import { Button } from "antd";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import NoFavourite from "./NoFavourite";
+import { types } from "../../types/types";
 
 const FoundFavourites = () => {
   const { Content } = Layout;
@@ -16,7 +17,7 @@ const FoundFavourites = () => {
   const showState = useSelector((state: any) => state);
 
   const handleClickDetails = (movieId: any) => {
-    dispFunction("ADD_MOVIEID", movieId);
+    dispFunction(types.ADD_MOVIEID, movieId);
     document.getElementById("menuDetails")?.click();
     history.push("/details");
   };
@@ -24,7 +25,7 @@ const FoundFavourites = () => {
   const handleClickDelete = (movieId: any) => {
     const favoritiesMovies: [] = showState.favourites;
     const result = favoritiesMovies.filter((movie: any) => movie.imdbID !== movieId);
-    dispFunction("SET_FAVOURITES", result);
+    dispFunction(types.SET_FAVOURITES, result);
     // UPDATED DATA SET TO LOCAL STORAGE
     localStorage.setItem('StorageFavourites', JSON.stringify(result));
     

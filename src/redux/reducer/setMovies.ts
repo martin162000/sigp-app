@@ -1,6 +1,7 @@
+import {types} from '../../types/types'
 const setMovies = (state = false, action:any) => {
     switch (action.type) {
-        case "ADD_MOVIES":
+        case types.ADD_MOVIES:
             return action.data
     
         default:

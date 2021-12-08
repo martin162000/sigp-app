@@ -1,8 +1,8 @@
 import React from "react";
-import { apiKey } from "../../types/types";
+import { types } from "../../types/types";
 import { Form, Input, Button } from "antd";
 import { useDispatch, useSelector } from "react-redux";
-import axios from "axios";
+import {fetchSubmitRequest} from "../../redux/actions";
 
 const SearchForm = () => {
   const dispatch = useDispatch();
@@ -14,33 +14,18 @@ const SearchForm = () => {
 
   const handleSubmit = () => {
     const query = showState.search;
-    const page = 1;
-    axios.get(`https://omdbapi.com/?apikey=${apiKey}&s=${encodeURI(query)}&page=${page}`).then((response) => {
-      if (response.data.Response === "True") {
-        const allResults = response.data.totalResults;
-        // All data to ombMovies
-        let ombMovies = response.data.Search.filter((movie: any) => movie.Poster !== "N/A");
-
-        // Filter duplicate data by imbdID
-        const seen = new Set();
-        const filteredArr = ombMovies.filter((movie: { imdbID: unknown }) => {
-          const duplicate = seen.has(movie.imdbID);
-          seen.add(movie.imdbID);
-          return !duplicate;
-        });
-
-        dispFunction("ADD_MOVIES", filteredArr);
-        dispFunction("ADD_ALLRESULTS", allResults);
-        dispFunction("ADD_CURRENTPAGE", page);
-      }
-    });
+    // REDUX SAGA
+    dispatch(fetchSubmitRequest(query)); 
   };
 
   const handleChange = (data: any) => {
-    dispFunction("ADD_SEARCH", data);
+    dispFunction(types.ADD_SEARCH, data);
   };
 
+
+
   return (
+    <>
     <Form
       className="fadeInFaster"
       name="basic"
@@ -67,6 +52,7 @@ const SearchForm = () => {
         </Button>
       </Form.Item>
     </Form>
+    </>
   );
 };
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col } from "antd";
 import { useDispatch, useSelector } from "react-redux";
+import { types } from "../../types/types";
 
 const Title = () => {
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ const Title = () => {
           Poster: showState.details.Poster,
         },
       ];
-      dispFunction("SET_FAVOURITES", fadData);
+      dispFunction(types.SET_FAVOURITES, fadData);
       // ADD FAVOURITES DATA TO LOCAL STOAGE
       localStorage.setItem('StorageFavourites', JSON.stringify(fadData));
 
@@ -39,7 +40,7 @@ const Title = () => {
       };
 
       allData.push(fadData);
-      dispFunction("SET_FAVOURITES", allData);
+      dispFunction(types.SET_FAVOURITES, allData);
       // ADD FAVOURITES DATA TO LOCAL STOAGE
       localStorage.setItem('StorageFavourites', JSON.stringify(allData));
       return;

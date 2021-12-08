@@ -1,6 +1,9 @@
+
+import {types} from '../../types/types'
+
 const setAllResults = (state = false, action:any) => {
     switch (action.type) {
-        case "ADD_ALLRESULTS":
+        case types.ADD_ALLRESULTS:
             return action.data
     
         default:

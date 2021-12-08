@@ -1,6 +1,8 @@
+import {types} from '../../types/types'
+
 const setCurrentPage = (state = false, action:any) => {
     switch (action.type) {
-        case "ADD_CURRENTPAGE":
+        case types.ADD_CURRENTPAGE:
             return action.data
     
         default:
