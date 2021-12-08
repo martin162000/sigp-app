@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/sigp-app/static/css/main.1a644de2.chunk.css",
+    "main.js": "/sigp-app/static/js/main.d7a9932f.chunk.js",
+    "main.js.map": "/sigp-app/static/js/main.d7a9932f.chunk.js.map",
+    "runtime-main.js": "/sigp-app/static/js/runtime-main.3164ec86.js",
+    "runtime-main.js.map": "/sigp-app/static/js/runtime-main.3164ec86.js.map",
+    "static/css/2.2b8316e7.chunk.css": "/sigp-app/static/css/2.2b8316e7.chunk.css",
+    "static/js/2.170ec1c5.chunk.js": "/sigp-app/static/js/2.170ec1c5.chunk.js",
+    "static/js/2.170ec1c5.chunk.js.map": "/sigp-app/static/js/2.170ec1c5.chunk.js.map",
+    "index.html": "/sigp-app/index.html",
+    "static/css/2.2b8316e7.chunk.css.map": "/sigp-app/static/css/2.2b8316e7.chunk.css.map",
+    "static/css/main.1a644de2.chunk.css.map": "/sigp-app/static/css/main.1a644de2.chunk.css.map",
+    "static/js/2.170ec1c5.chunk.js.LICENSE.txt": "/sigp-app/static/js/2.170ec1c5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3164ec86.js",
+    "static/css/2.2b8316e7.chunk.css",
+    "static/js/2.170ec1c5.chunk.js",
+    "static/css/main.1a644de2.chunk.css",
+    "static/js/main.d7a9932f.chunk.js"
+  ]
+}
