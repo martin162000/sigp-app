@@ -46,7 +46,9 @@ function App() {
           <Route exact path="/">
               <Redirect to="/movies" />
           </Route>
-
+          <Route path="/sigp-app">
+              <Redirect to="/movies" />
+          </Route>
           <Route path="/movies" component={Movies} />
           <Route path="/details" component={Details} />
           <Route path="/favourites" component={Favourites} />
