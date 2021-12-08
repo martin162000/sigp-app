@@ -1,8 +1,14 @@
 import React from "react";
-import { types } from "../../types/types";
-import { Form, Input, Button } from "antd";
 import { useDispatch, useSelector } from "react-redux";
+
+// IMPORT ANTDESIGN
+import { Form, Input, Button } from "antd";
+
+// IMPORT TYPES AND ACTIONS
+import { types } from "../../types/types";
 import {fetchSubmitRequest} from "../../redux/actions";
+
+
 
 const SearchForm = () => {
   const dispatch = useDispatch();
@@ -21,8 +27,6 @@ const SearchForm = () => {
   const handleChange = (data: any) => {
     dispFunction(types.ADD_SEARCH, data);
   };
-
-
 
   return (
     <>

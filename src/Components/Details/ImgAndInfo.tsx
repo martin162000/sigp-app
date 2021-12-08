@@ -1,6 +1,8 @@
 import React from 'react'
-import { Row, Col } from 'antd';
 import { useSelector } from 'react-redux';
+
+// IMPORT ANTDESIGN
+import { Row, Col } from 'antd';
 
 
 const ImgAndInfo = () => {

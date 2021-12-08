@@ -1,7 +1,13 @@
 import React from "react";
-import { Row, Col } from "antd";
 import { useDispatch, useSelector } from "react-redux";
+
+// IMPORT ANTDESIGN
+import { Row, Col } from "antd";
+
+// IMPORT TYPES
 import { types } from "../../types/types";
+
+
 
 const Title = () => {
   const dispatch = useDispatch();

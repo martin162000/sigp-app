@@ -1,5 +1,9 @@
 import React from 'react';
+
+//IMPORT ANTDESIGN
 import { Layout} from 'antd';
+
+// IMPORT COMPONENTS
 import SearchForm from '../Components/Movies/SearchForm';
 import FoundMovies from '../Components/Movies/FoundMovies';
 import Pages from '../Components/Movies/Pages';

@@ -1,4 +1,6 @@
 import { combineReducers } from "redux";
+
+//IMPORT ALL REDUCERS
 import setAllResults from "./setAllResults";
 import setCurrentPage from "./setCurrentPage";
 import setMovies from "./setMovies"

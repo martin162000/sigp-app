@@ -1,14 +1,24 @@
 import React, { useEffect } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
+import { useDispatch } from "react-redux";
+
+// IMPORT TYPES
+import { types } from "./types/types";
+
+// IMPORT ANTDESIGN
 import "antd/dist/antd.css";
 import { Layout } from "antd";
 
+// IMPORT COMPONENTS
 import Headerbar from "./Components/Headerbar";
 import Footerbar from "./Components/Footerbar";
 import Movies from "./Views/Movies";
 import Details from "./Views/Details";
 import Favourites from "./Views/Favourites";
-import { useDispatch } from "react-redux";
+
+
+
+
 
 function App() {
   // GET DATA FROM LOCAL STORAGE
@@ -22,7 +32,7 @@ function App() {
   // POST DATA FROM LOCAL STORAGE TO REDUX
   useEffect(() => {
     if(parsedData) {
-    dispFunction("SET_FAVOURITES", parsedData);
+    dispFunction(types.SET_FAVOURITES, parsedData);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -33,7 +43,6 @@ function App() {
         <Headerbar />
 
         <Switch>
-
           <Route exact path="/">
               <Redirect to="/movies" />
           </Route>

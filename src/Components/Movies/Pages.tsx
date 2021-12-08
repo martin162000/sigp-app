@@ -1,7 +1,13 @@
 import React from "react";
-import { Pagination } from "antd";
 import { useDispatch, useSelector } from "react-redux";
+
+//IMPORT ANTDESIGN
+import { Pagination } from "antd";
+
+// IMPORT ACTIONS
 import {fetchSubmitRequest} from "../../redux/actions";
+
+
 
 const Pages = () => {
   const showState = useSelector((state: any) => state);

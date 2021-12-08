@@ -1,11 +1,20 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+
+// IMPORT ANT DESIGN 
 import { Layout } from "antd";
 import { Row, Col } from "antd";
 import { Button } from "antd";
-import { useHistory } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import NoFavourite from "./NoFavourite";
+
+// IMPORT TYPES
 import { types } from "../../types/types";
+
+// IMPORT COMPONENTS
+import NoFavourite from "./NoFavourite";
+
+
+
 
 const FoundFavourites = () => {
   const { Content } = Layout;

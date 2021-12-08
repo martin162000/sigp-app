@@ -1,11 +1,20 @@
 import React, { useEffect } from "react";
-import { Layout } from "antd";
 import { useDispatch, useSelector } from "react-redux";
+
+// IMPORT ACTIONS
+import { fetchDetailsRequest } from "../redux/actions";
+
+// IMPORT ANTDESIGN
+import { Layout } from "antd";
+
+// IMPORT COMPONENTS
 import ImgAndInfo from "../Components/Details/ImgAndInfo";
 import Title from "../Components/Details/Title";
 import Loading from "../Components/Details/Loading";
 import CantFind from "../Components/Details/CantFind";
-import { fetchDetailsRequest } from "../redux/actions";
+
+
+
 
 const Details = () => {
   const { Content } = Layout;
@@ -13,16 +22,10 @@ const Details = () => {
   const showState = useSelector((state: any) => state);
   const dispatch = useDispatch();
 
-  const test = () => {
-    dispatch(fetchDetailsRequest(showState.deatilID)); 
-  }
-
   useEffect(() => {
-
     dispatch(fetchDetailsRequest(showState.deatilID)); 
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    
+  }, [dispatch, showState.deatilID]);
 
   if (!showState.deatilID) {
     return <CantFind />;
@@ -41,8 +44,6 @@ const Details = () => {
         ) : (
           <Loading />
         )}
-
-        <button onClick={test}>CLICK</button>
       </>
     );
   }

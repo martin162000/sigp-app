@@ -1,7 +1,11 @@
-import { types, apiKey } from "../../types/types"
-import axios from "axios"
-import {addAllResults, addCurrentPage, addDetais, addMovie} from "../actions"
 import { call, takeEvery, put, all } from "typed-redux-saga";
+
+// IMPORT TYPES AND ACTIONS
+import { types, apiKey } from "../../types/types"
+import {addAllResults, addCurrentPage, addDetais, addMovie} from "../actions"
+
+// IMPORT AXIOS
+import axios from "axios"
 
 
 function* ayscFetchRequest(action:any){
@@ -52,9 +56,8 @@ function* ayscDetails(action:any){
         yield call(()=>axios.get(url).then((response) => {
             if (response.data.Response === "True") {
                 detailData = response.data
-            }
-          }))
-          
+            }}))
+
           yield put(addDetais(detailData))
     } catch(error) {
         //console.log(error);
