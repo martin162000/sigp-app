@@ -5,18 +5,16 @@ import { NavLink } from "react-router-dom";
 const Headerbar = () => {
   const { Header } = Layout;
 
-  console.log(window.location.pathname);
-
   return (
     <Header className="header">
-      <Menu theme="dark" mode="horizontal" style={{ justifyContent: "center" }} defaultSelectedKeys={["1"]}>
-        <Menu.Item id="menuMovies" key="1">
+      <Menu theme="dark" mode="horizontal" style={{ justifyContent: "center" }} defaultSelectedKeys={[window.location.pathname]}>
+        <Menu.Item id="menuMovies" key="/movies">
           <NavLink to="/movies">Movies</NavLink>
         </Menu.Item>
-        <Menu.Item id="menuDetails" key="2">
+        <Menu.Item id="menuDetails" key="/details">
           <NavLink to="/details">Details</NavLink>
         </Menu.Item>
-        <Menu.Item id="menuFavourites" key="3">
+        <Menu.Item id="menuFavourites" key="/favourites">
           <NavLink to="/favourites">Favourites</NavLink>
         </Menu.Item>
       </Menu>

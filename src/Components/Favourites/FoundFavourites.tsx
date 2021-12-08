@@ -25,6 +25,9 @@ const FoundFavourites = () => {
     const favoritiesMovies: [] = showState.favourites;
     const result = favoritiesMovies.filter((movie: any) => movie.imdbID !== movieId);
     dispFunction("SET_FAVOURITES", result);
+    // UPDATED DATA SET TO LOCAL STORAGE
+    localStorage.setItem('StorageFavourites', JSON.stringify(result));
+    
   };
 
   if (showState.favourites.length === 0 || showState.favourites.length === undefined) {

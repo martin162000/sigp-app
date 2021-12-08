@@ -25,10 +25,12 @@ const Title = () => {
         },
       ];
       dispFunction("SET_FAVOURITES", fadData);
+      // ADD FAVOURITES DATA TO LOCAL STOAGE
+      localStorage.setItem('StorageFavourites', JSON.stringify(fadData));
 
       return;
     } else {
-      // Add favrourite to other favourites (by push)
+      // Add favourites to other favourites (by push)
       const allData = showState.favourites;
       const fadData = {
         Title: showState.details.Title,
@@ -38,6 +40,8 @@ const Title = () => {
 
       allData.push(fadData);
       dispFunction("SET_FAVOURITES", allData);
+      // ADD FAVOURITES DATA TO LOCAL STOAGE
+      localStorage.setItem('StorageFavourites', JSON.stringify(allData));
       return;
     }
   };
