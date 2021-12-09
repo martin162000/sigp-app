@@ -8,7 +8,7 @@ import { Layout, Menu } from "antd";
 
 const Headerbar = () => {
   const { Header } = Layout;
-  const pathName = window.location.pathname === "/sigp-app" ? "/movies" : window.location.pathname ;
+  const pathName = window.location.pathname === "/sigp-app/" ? "/movies" : window.location.pathname ;
 
   return (
     <Header className="header">
